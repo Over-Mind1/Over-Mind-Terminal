@@ -22,7 +22,7 @@ A single-script terminal intro that splashes a neon, cyberpunk logo, glitch anim
 ## Installation & Usage
 
 ```bash
-git clone <repo>
+git clone [<repo>](https://github.com/Over-Mind1/Over-Mind-Terminal.git)
 cd Over-Mind-Terminal
 chmod +x overmind_banner.sh
 ./overmind_banner.sh
