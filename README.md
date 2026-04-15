@@ -1,46 +1,77 @@
-# Over-Mind Terminal Banner
+# Over-Mind Terminal
 
-A single-script terminal intro that splashes a neon, cyberpunk logo, glitch animation, and live system metadata whenever you launch a shell session for Over-Mind demos or recordings.
+Professional terminal startup banners for the Over-Mind project, with two visual themes:
 
-## Preview
+- `overmind_banner_neon.sh` (Neon/Cyberpunk style)
+- `overmind_banner_Goku.sh` (Goku style)
 
-![Over-Mind terminal banner](assets/terminal.png)
+## Run Banner (Top Command)
+
+```bash
+sh overmind_banner_neon.sh
+```
+
+You can also run:
+
+```bash
+sh overmind_banner_Goku.sh
+```
+
+## Project Logo: Over-Mind Terminal
+
+![Over-Mind Terminal Logo](assets/terminal.png)
+
+
+## Recommended Image + Script Pairing
+
+| Preview Image | Recommended Script |
+| --- | --- |
+| `assets/1.jpg` | `overmind_banner_neon.sh` |
+| `assets/2.jpg` | `overmind_banner_neon.sh` |
+| `assets/3.png` | `overmind_banner_Goku.sh` |
 
 ## Features
 
-- 256-color `bash` animation with random neon hues and centered ASCII art.
-- `NAME` plate rendered below the logo and a stylized title card highlighting the lab mission.
-- Spinner-style status sequence followed by user, host, and timestamp metadata.
-- Strict mode (`set -euo pipefail`) plus traps to keep colors reset on exit.
+- Animated terminal banners with centered ASCII branding.
+- Theme-specific visual identity for demos, recordings, and startup sessions.
+- Shell-friendly scripts for quick execution.
+- Color reset handling to keep terminal output clean after execution.
 
 ## Requirements
 
-- `bash` (v4+) on Linux/macOS.
-- `tput` (comes from `ncurses`) to measure the terminal width.
-- A 256-color compatible terminal for the cyan/pink/yellow palette.
+- Linux or macOS terminal.
+- `bash` (v4+ recommended).
+- `tput`/`ncurses` support for terminal width and color behavior.
 
-## Installation & Usage
+For full dependency and platform install details, see [REQUIREMENTS.md](REQUIREMENTS.md).
+
+## Installation
 
 ```bash
-git clone [<repo>](https://github.com/Over-Mind1/Over-Mind-Terminal.git)
+git clone https://github.com/Over-Mind1/Over-Mind-Terminal.git
 cd Over-Mind-Terminal
-chmod +x overmind_banner.sh
-./overmind_banner.sh
+chmod +x overmind_banner_neon.sh overmind_banner_Goku.sh
 ```
 
-Stub the script into your shell startup (e.g., `~/.bashrc`, `~/.profile`, or the Welcome hook in a multiplexer) to display the banner automatically when a session starts.
+## Usage
 
-Pair it with `~/bin` or a launcher so demos always start with the same cinematic intro.
+Run Neon banner:
 
-## Customization
+```bash
+./overmind_banner_neon.sh
+```
 
-- Edit the `LOGO` and `NAME` arrays to change the ASCII art or brand statements.
-- Adjust `COLOR_PALETTE` or the `frames` array in `status_sequence()` to fine-tune colors and the system readiness animation.
-- Use `center_text` and `get_indent` as templates when adding new text blocks so the art re-centers automatically.
+Run Goku banner:
 
-## Contribution
+```bash
+./overmind_banner_Goku.sh
+```
 
-Open a pull request for additions such as new variants (e.g., dark mode, custom prompts, or additional metadata). Keep terminal compatibility in mind when introducing new glyphs or escape sequences.
+To launch automatically at shell startup, add one of the commands to your shell profile (for example `~/.bashrc`):
+
+```bash
+sh /path/to/Over-Mind-Terminal/overmind_banner_neon.sh
+```
 
 ## License
 
